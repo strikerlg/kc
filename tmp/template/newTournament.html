@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>tytul</title>
+<!-- Dołącz Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<!-- Dołącz main CSS -->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<!-- Dołącz jQuery biblioteke -->
+<script src="../js/jQuery/jquery.min.js"></script>
+<!-- Dołącz Bootstrap Javascript -->
+<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Formularz tworzenia nowego turnieju -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h3>Tworzenie turnieju</h3><br>
+            <form action="" method="POST">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="nazwaTurnieju">Nazwa Turnieju</label>
+                        <input type="text" class="form-control" id="nazwaTurnieju" name="nazwaTurnieju" placeholder=""><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="dataRozpoczecia">Data rozpoczęcia turnieju</label>
+                        <input type="text" class="form-control" id="dataRozpoczecia" name="dataRozpoczecia" placeholder="">
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="dataZakonczenia">Data zakończenia turnieju</label>
+                        <input type="text" class="form-control" id="dataZakonczenia" name="dataZakonczenia" placeholder=""><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="dataRozpoczecia">Ustawienia prywatności</label>
+                        <select class="form-control"  name="ustawieniaPrywatnosci">
+                            <option value="publish">Widoczny i dostępny dla wszystkich</option>
+                            <option value="private">Ukryty i niedostępny dla nieuprawnionych użytkowników</option>
+                        </select><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="lokalizacjaTurnieju">Lokalizacja</label>
+                        <input type="text" class="form-control" id="lokalizacjaTurnieju" name="lokalizacjaTurnieju" placeholder=""><br>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Załóż turniej</button>
+            </form>    
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+<div>
+
+</body>
+</html>
