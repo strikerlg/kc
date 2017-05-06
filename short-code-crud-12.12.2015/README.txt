@@ -1,38 +1,29 @@
-<b>Struktura pliku:</b></br>
+File Structure : 
 
-1. config.php: Konfiguracja skryptu</br>
-2. database.php: Baza danych </br>
-3. user.php: przykładowy skrypt </br>
-4. class / Main.class.php: plik klasy dla wszystkich metod </br></br>
+1. config.php : Configuration for the script
+2. database.php : Database for the test 
+3. user.php : Example script with Add, Edit, Records Display, Delete, Active/Inactive Change Status and Pagination methods
+4. class/Main.class.php : Class file for all the important methods
 
-<b>Metody zastosowane w klasie:</b></br>
 
-<b>1) RedirectPage($url):</b></br> 
-<b>Parametr(y):</b></br>
-url (string) => Nazwa pliku lub adres URL gdzie chcesz przekierować użytkownika</br>
-<b>Szczegóły:</b> Metoda przekieruje do podanego adresu URL.</br>
-<b>Przykład:</b> <pre>$ Main-> RedirectPage ("userdetails.php");</pre></br>
+Methods in the Class : 
 
-===========================
-
-<b>2) ViewLink ($ id):</b></br>
-<b>Szczegóły:</b> Metoda wygeneruje działanie generujące wyświetlenie widoku, takie jak user.php?action=view&id=1. 
-Wystarczy podać PRIMARY KEY/ID rekordu, który ma zostać wyświetlony.
-<b>Parametr(y):</b></br>
-id (integer) => Podstawowy klucz rekordu, którego chcesz uzyskać szczegóły.</br>
-<b>Przykład: </b></br>
-<pre><a href="<?pod echo $Main-> ViewLink (1);?>">Pokaż szczegóły</a></pre>
-</br>
-<b>Wyjście:</b><pre> user.php?action=view&id=1</pre></br>
+1) RedirectPage($url) : 
+Parameter(s) : 
+1 : url (string) => The file name or the url where you want to redirect the user
+Details : The method will redirect to the give url. 
+Example : $Main->RedirectPage("userdetails.php");
 
 ===========================
 
-3) EditLink ($ id):
-Szczegóły: Metoda wygeneruje działanie EDIT, takie jak user.php? Action = edit & id = 1. Wystarczy podać PRIMARY KEY / ID rekordu, który chcesz edi rekord.
-Parametr (y):
-1: id (integer) => Podstawowy klucz rekordu, który chcesz otrzymywać i edytować szczegóły.
-Przykład: <a href="<?php echo $Main-> EditLink (1)?? "> Edytuj </a>
-Wyjście: user.php? Action = edit & id = 1
+2) ViewLink($id) : 
+Details : The method will generate VIEW action like user.php?action=view&id=1. You just need to provide the PRIMARY KEY/ID of the record which you want to display.
+Parameter(s) : 
+1 : id (integer) => The primary key for the record which you want to get details.
+Example : <a href="<?php echo $Main->ViewLink(1); ?>">View Details</a>
+Output : user.php?action=view&id=1
+
+===========================
 
 3) EditLink($id) : 
 Details : The method will generate EDIT action like user.php?action=edit&id=1. You just need to provide the PRIMARY KEY/ID of the record which you want to edi the record.
@@ -42,16 +33,6 @@ Example : <a href="<?php echo $Main->EditLink(1); ?>">Edit</a>
 Output : user.php?action=edit&id=1
 
 ===========================
-
-4) StatusChangeLink ($ id, $ currentstatus):
-Szczegóły: Metoda wygeneruje działanie STATUS CHANGE, takie jak user.php? Action = action & id = 1 & status = 0. Wystarczy podać PRIMARY KEY / ID rekordu, który chcesz zmienić aktywny / nieaktywny stan rekordu. Ta metoda wygeneruje dwa łącza do rekordu. Jeden dla aktywnego statusu i inther dla stanu nieaktywnego
-Parametr (y):
-1: id (integer) => Podstawowy klucz rekordu, który chcesz zmienić stan.
-2: bieżący stan (liczba całkowita) => jeśli ustawiono wartość 0 jako nieaktywną i 1 jako status aktywny. Musisz przekazać bieżący stan rekordu.
-Przykład: <? Php echo $ Main-> StatusChangeLink (1,0); ?>
-Wyjście:
-1: <a href="user.php?action=status&id=1&status=0"> Aktywny </a>: Jeśli rekord ma status aktywny, ten link będzie używany do nieaktywnego.
-2: <a href="user.php?action=status&id=1&status=1"> Nieaktywne </a>: jeśli rekord ma nieaktywny status, ten link będzie używany do aktywnego.
 
 4) StatusChangeLink($id,$currentstatus) : 
 Details : The method will generate STATUS CHANGE action like user.php?action=action&id=1&status=0. You just need to provide the PRIMARY KEY/ID of the record which you want to change the active/inactive status of the record. This method will generate two links for the record. One for Active Status and onther for Inactive Status
