@@ -1,10 +1,9 @@
-File Structure : 
+<b>Struktura pliku:<b></br>
 
-1. config.php : Configuration for the script
-2. database.php : Database for the test 
-3. user.php : Example script with Add, Edit, Records Display, Delete, Active/Inactive Change Status and Pagination methods
-4. class/Main.class.php : Class file for all the important methods
-
+1. config.php: Konfiguracja skryptu
+2. database.php: Baza danych 
+3. user.php: przykładowy skrypt z dodawaniem, edycją, rejestrowaniem wyświetlania, usuwanie, aktywnym / nieaktywnym statusem zmian i metodami podziału stron
+4. class / Main.class.php: plik klasy dla wszystkich ważnych metod
 
 Methods in the Class : 
 
